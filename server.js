@@ -52,8 +52,8 @@ app.post('/contactForm', function (req, res) {
 });
 
 
-
-var server = app.listen(8000, function () {
+const PORT = process.env.PORT
+var server = app.listen(PORT || 8080, function () {
    var host = server.address().address
    var port = server.address().port
 
