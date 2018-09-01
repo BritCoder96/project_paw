@@ -390,8 +390,10 @@
 			<h2 class="text-center text-primary">Contact us using the form below</h2>
 			<br />
 			<div class="row">
-				<div class="col-md-6">
-					<div id="googlemap"></div>
+				<div class="col-md-6 text-justify">
+					<div id="googlemap">
+						<iframe width="450" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJb2HL9WXl2okR3PTKeT0BhyI&key=AIzaSyBd5jQHm3jnz3XNKCkLZlZT34z4g6iKqpM" allowfullscreen></iframe>
+					</div>
 				</div>
 				<div class="col-md-6">
 					<fieldset>
@@ -509,23 +511,13 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script src="js/theme.js"></script>
 <script type="text/javascript" src="http://prepbootstrap.com/Content/shieldui-lite/dist/js/shieldui-lite-all.min.js"></script>
 <script type="text/javascript" src="https://www.shieldui.com/shared/components/latest/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="https://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
 
 <script type="text/javascript">
     jQuery(function($) {
-        // Google Maps setup
-        var googlemap = new google.maps.Map(
-            document.getElementById('googlemap'),
-            {
-                center: new google.maps.LatLng(44.5403, -78.5463),
-                zoom: 8,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
-        );
+
 		// Shield Chart
 		$("#chart").shieldChart({
             theme: "bootstrap",
