@@ -14,37 +14,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 express.json()
 
  
-// POST route from contact form
-app.post('/contactForm', function (req, res) {
-  let mailOpts, smtpTrans;
-  smtpTrans = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-       user: process.env.email,
-       pass: process.env.password
-    }
-  });
-  mailOpts = {
-    from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-    to: process.env.email,
-    subject: req.body.subject,
-    text: '${req.body.name} (${req.body.email}) says: ${req.body.message}'
-  };
-  console.log('test')
-  smtpTrans.sendMail(mailOpts, function (error, response) {
-    if (error) {
-      console.log(error)
-      res.sendFile( __dirname + "/public/" + "index.html" );
-    }
-    else {
-      console.log('success')
-      res.sendFile( __dirname + "/public/" + "index.html" );
-    }
-  });
-});
-
 app.get('/index.html', function (req, res) {
    res.sendFile( __dirname + "/" + "index.html" );
 })
@@ -52,8 +21,39 @@ app.get('/', function (req, res) {
    res.sendFile( __dirname + "/" + "index.html" );
 })
 
+// POST route from contact form
+app.post('/contactForm', function (req, res) {
+  let mailOpts, smtpTrans;
+  console.log(req.body.subject)
+  smtpTrans = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+       user: process.env.EMAIL,
+       pass: process.env.PASSWORD
+    }
+  });
+  mailOpts = {
+    from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+    to: process.env.EMAIL,
+    subject: req.body.subject,
+    text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+  };
+  smtpTrans.sendMail(mailOpts, function (error, response) {
+    if (error) {
+      console.log(error)
+      res.redirect("/" );
+    }
+    else {
+      res.redirect("/" );
+    }
+  });
+});
 
-var server = app.listen(8000, function () {
+
+const PORT = process.env.PORT
+var server = app.listen(PORT || 8080, function () {
    var host = server.address().address
    var port = server.address().port
 
