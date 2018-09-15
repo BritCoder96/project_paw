@@ -105,7 +105,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
 }
 button,
@@ -1083,7 +1083,6 @@ input,
 button,
 select,
 textarea {
-  font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
@@ -1174,7 +1173,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: 'Oswald', sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -1521,7 +1520,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: 'Open Sans', sans-serif;
 }
 code {
   padding: 2px 4px;
@@ -3955,6 +3954,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-left: -1px;
 }
 .nav {
+  font-family: 'Oswald', sans-serif;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
@@ -6727,7 +6727,7 @@ button.close {
 /* Custom styles */
 body {
     padding-top: 70px;
-	font-family: 'Verdana', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 	color: #4E5152;
 }
 
