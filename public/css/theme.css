@@ -4066,6 +4066,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     border-bottom-color: #ffffff;
   }
 }
+.indent {
+  text-indent: 2.2em;
+}
 .nav-pills > li {
   float: left;
 }
