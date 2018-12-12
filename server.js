@@ -25,6 +25,8 @@ app.get('/', function (req, res) {
 app.post('/contactForm', function (req, res) {
   let mailOpts, smtpTrans;
   console.log(req.body.subject)
+  console.log(process.env.EMAIL)
+  console.log(process.env.PASSWORD)
   smtpTrans = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
