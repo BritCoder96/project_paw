@@ -51,6 +51,35 @@ app.post('/contactForm', function (req, res) {
   });
 });
 
+// POST route from adopt form
+app.post('/adoptForm', function (req, res) {
+  let mailOpts, smtpTrans;
+  smtpTrans = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+       user: process.env.EMAIL,
+       pass: process.env.PASSWORD
+    }
+  });
+  mailOpts = {
+    from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+    to: process.env.EMAIL,
+    subject: req.body.name + " wants to adopt",
+    text: `Adoption Information: ${JSON.stringify(req.body, null, '\n').replace(/\"/g, '').replace('{', '').replace('}', '')}`
+  };
+  smtpTrans.sendMail(mailOpts, function (error, response) {
+    if (error) {
+      console.log(error)
+      res.redirect("/" );
+    }
+    else {
+      res.redirect("/" );
+    }
+  });
+});
+
 
 const PORT = process.env.PORT
 var server = app.listen(PORT || 8080, function () {

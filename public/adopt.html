@@ -65,22 +65,131 @@
 			<div class="row">
 				<div class="col-md-12">
 					<fieldset>
-						<form action="/contactForm" id="contact-form" method="post" role="form">
+						<form action="/adoptForm" id="contact-form" method="post" role="form">
+
 							<div class="form-group">
-								<label for="name">Name</label>
-								<input type="text" name="name" class="form-control" id="name" placeholder="Name">
+								<label for="name">Full Name<span class="form-required">*</span></label>
+								<input type="text" name="name" class="form-control" id="name">
 							</div>
 							<div class="form-group">
-								<label for="email">Email Address</label>
+								<label for="street-address"><h4>Street Address<span class="form-required">*</span></h4></label><br><br>
+				               <!-- address-line1 input-->
+				               <div class="control-group">
+				                   <label class="control-label">Address Line 1</label>
+				                   <div class="controls">
+				                       <input id="address-line1" name="address-line1" type="text" placeholder="Address Line 1"
+				                       class="form-control">
+				                       <p class="help-block">Street address, P.O. box, company name, c/o</p>
+				                   </div>
+				               </div>
+				               <!-- address-line2 input-->
+				               <div class="control-group">
+				                   <label class="control-label">Address Line 2</label>
+				                   <div class="controls">
+				                       <input id="address-line2" name="address-line2" type="text" placeholder="Address Line 2"
+				                       class="form-control">
+				                       <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
+				                   </div>
+				               </div>
+				               <!-- city input-->
+				               <div class="control-group">
+				                   <label class="control-label">City / Town</label>
+				                   <div class="controls">
+				                       <input id="city" name="city" type="text" placeholder="City" class="form-control">
+				                       <p class="help-block"></p>
+				                   </div>
+				               </div>
+				               <!-- region input-->
+				               <div class="control-group">
+				                   <label class="control-label">State / Province / Region</label>
+				                   <div class="controls">
+				                       <input id="region" name="region" type="text" placeholder="State/Province/Region"
+				                       class="form-control">
+				                       <p class="help-block"></p>
+				                   </div>
+				               </div>
+				               <!-- postal-code input-->
+				               <div class="control-group">
+				                   <label class="control-label">Zip / Postal Code</label>
+				                   <div class="controls">
+				                       <input id="postal-code" name="postal-code" type="text" placeholder="ZIP or postal code"
+				                       class="form-control">
+				                       <p class="help-block"></p>
+				                   </div>
+				               </div>
+							</div>
+							<div class="form-group">
+								<label for="street-address"><h4>Mailing Address (If Different)<span class="form-required">*</span></h4></label><br><br>
+								<div class="control-group">
+				               <!-- address-line1 input-->
+				               <div class="control-group">
+				                   <label class="control-label">Address Line 1</label>
+				                   <div class="controls">
+				                       <input id="mailing-address-line1" name="mailing-address-line1" type="text" placeholder="Address Line 1"
+				                       class="form-control">
+				                       <p class="help-block">Street address, P.O. box, company name, c/o</p>
+				                   </div>
+				               </div>
+				               <!-- address-line2 input-->
+				               <div class="control-group">
+				                   <label class="control-label">Address Line 2</label>
+				                   <div class="controls">
+				                       <input id="mailing-address-line2" name="mailing-address-line2" type="text" placeholder="Address Line 2"
+				                       class="form-control">
+				                       <p class="help-block">Apartment, s-uite , unit, building, floor, etc.</p>
+				                   </div>
+				               </div>
+				               <!-- city input-->
+				               <div class="control-group">
+				                   <label class="control-label">City / Town</label>
+				                   <div class="controls">
+				                       <input id="mailing-city" name="mailing-city" type="text" placeholder="City" class="form-control">
+				                       <p class="help-block"></p>
+				                   </div>
+				               </div>
+				               <!-- region input-->
+				               <div class="control-group">
+				                   <label class="control-label">State/ Province/Region</label>
+				                   <div class="controls">
+				                       <input id="mailing-region" name="mailing-region" type="text" placeholder="State/Province/Region"
+				                       class="form-control">
+				                       <p class="help-block"></p>
+				                   </div>
+				               </div>
+				               <!-- postal-code input-->
+				               <div class="control-group">
+				                   <label class="control-label">Zip / Postal Code</label>
+				                   <div class="controls">
+				                       <input id="mailing-postal-code" name="mailing-postal-code" type="text" placeholder="ZIP or postal code"
+				                       class="form-control">
+				                       <p class="help-block"></p>
+				                   </div>
+				               </div>
+							</div>
+							-<h4>Other Information</h4><br><br>
+							<div class="form-group">
+								<label for="email">Email Address<span class="form-required">*</span></label>
 								<input type="email" name="email" class="form-control" id="email" placeholder="Email Address">
 							</div>
 							<div class="form-group">
-								<label for="subject">Subject</label>
-								<input type="text" name="subject" class="form-control" id="subject" placeholder="Subject">
+								<label for="cell-phone">Cell Phone<span class="form-required">*</span></label>
+								<input type="text" name="cell-phone" class="form-control" id="cell-phone" placeholder="Cell Phone">
 							</div>
 							<div class="form-group">
-								<label for="message">Email your Message</label>
-								<textarea class="form-control" name="message" id="message" placeholder="Message"></textarea>
+								<label for="home-phone">Home Phone<span class="form-required">*</span></label>
+								<input type="text" name="home-phone" class="form-control" id="home-phone" placeholder="Home Phone">
+							</div>
+							<div class="form-group">
+								<label for="dwelling-type">Type of dwelling, house, condo, apartment, trailer, etc.<span class="form-required">*</span></label>
+								<input type="text" name="dwelling-type" class="form-control" id="dwelling-type" placeholder="Dwelling Type">
+							</div>
+							<div class="form-group">
+								<label for="property-owner-name">Name of Property Owner<span class="form-required">*</span></label>
+								<input type="text" name="property-owner-name" class="form-control" id="property-owner-name" placeholder="Name of Property Owner">
+							</div>
+							<div class="form-group">
+								<label for="property-owner-phone">Phone number for property owner<span class="form-required">*</span></label>
+								<input type="text" name="property-owner-phone" class="form-control" id="property-owner-phone" placeholder="Phone number for property owner">
 							</div>
 							<button class="button-more-primary btn btn-lg" type="submit" style="margin:10px;">Submit</button>
 							<br /><br />
