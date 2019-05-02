@@ -1087,7 +1087,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #33495f;
+  color: #000000;
   text-decoration: none;
 }
 a:hover,
@@ -1327,11 +1327,14 @@ mark,
   color: #777777;
 }
 .text-primary {
-  color: #33495f;
+  color: #000000;
 }
 a.text-primary:hover,
 a.text-primary:focus {
   color: #212f3e;
+}
+.text-primary2 {
+  color: #f4eb37;
 }
 .text-success {
   color: #3c763d;
@@ -3218,7 +3221,7 @@ fieldset[disabled] .btn-success.focus {
   border-color: #36be77;
 }
 .btn-success .badge {
-  color: #0086b3;
+  color: #f4eb37;
   background-color: #ffffff;
 }
 .btn-info {
@@ -4160,7 +4163,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   min-height: 70px;
   margin-bottom: 20px;
-  border: 1px solid transparent;
+  border: 1px solid #f4eb37;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -4350,8 +4353,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 }
 .navbar-form {
@@ -4527,6 +4530,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #dddddd;
 }
+
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border-color: #70777d;
@@ -4579,8 +4583,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #cccccc;
 }
 .navbar-inverse {
-  background-color: #00ace6;
-  border-color: #0086b3;
+  background-color: #000000;
 }
 .navbar-inverse .navbar-brand {
   color: #ffffff;
@@ -4598,7 +4601,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #363d41;
+  color: #f4eb37;
   background-color: transparent;
 }
 .navbar-inverse .navbar-nav > .active > a,
@@ -4614,18 +4617,18 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   background-color: transparent;
 }
 .navbar-inverse .navbar-toggle {
-  border-color: #0086b3;
+  border-color: #f4eb37;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: #0086b3;
+  background-color: #f4eb37;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
   background-color: #ffffff;
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: #0086b3;
+  border-color: #f4eb37;
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
@@ -6743,7 +6746,7 @@ ul {
 body {
   padding-top: 70px;
   font-family: 'Open Sans', sans-serif;
-	color: #4E5152;
+	color: #000;
 }
 
 h1 {
@@ -6773,18 +6776,18 @@ h2 {
 }
 
 .button-more-primary {
-    border: 2px solid;
     display: inline-block;
     position: relative;
     text-align: center;
-    background-color: #00ace6;
-    color: #fff;
+    background-color: #000000;
+    color: #f4eb37;
 	  border-radius: 0;
+    font-family: 'Oswald', sans-serif;
 }
 
 .button-more-primary:hover {
-    background-color: #fff;
-    color: #0086b3;
+    background-color: #f4eb37;
+    color: #000000;
 	  border-radius: 0;
 }
 
@@ -6793,21 +6796,21 @@ h2 {
     display: inline-block;
     position: relative;
     text-align: center;
-    background-color: #0086b3;
+    background-color: #000000;
     color: #fff;
 	  border-radius: 0;
 }
 
 .button-more-success:hover {
     background-color: #fff;
-    color: #0086b3;
+    color: #000000;
 	border-radius: 0;
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
     color: #151515;
     background-color: transparent;
-    border-bottom: 2px solid #0086b3;
+    border-bottom: 2px solid #f4eb37;
     cursor: default;
 }
 
@@ -6821,15 +6824,15 @@ h2 {
 }
 
 .container-phone {
-	background-color: #C7C7C7;
-	color: #33495F;
+	background-color: #000;
+	color: #FFF;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
 
 .container-phone2 {
-	background-color: #363D41;
-	color: #fff;
+	background-color: #000;
+	color: #f4eb37;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
@@ -6850,7 +6853,7 @@ h2 {
     text-align: center;
 }
 a.footer-socialicon {
-	color: #777;
+	color: #000000;
 	text-decoration: none;
 }
 
@@ -6862,8 +6865,8 @@ a.footer-socialicon {
 #subfooter {
 	padding-top: 40px;
 	padding-bottom: 40px;
-	background-color: #0086b3;
-	color: #ffffff;
+	background-color: #f4eb37;
+	color: #000000;
 }
 
 #footer {
